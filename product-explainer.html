@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vastbase Product Explainer</title>
   <meta name="description" content="Vastbase product demo: Sign up, Create a team wallet, Team wallet workflow." />
+  <link rel="icon" type="image/x-icon" href="images/Vastbase_logo_light_theme.svg">
   <style>
     :root{
       --bg:#0b0f14; --panel:#0f1520; --accent:#52C41A; --muted:#9fb3c8; --text:#e7f0fa; --ring:#2b3a4a;
@@ -29,7 +30,7 @@
     .hero p{margin:0;color:var(--muted)}
 
     .grid{display:grid;gap:22px;margin-top:18px}
-    @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
 
     .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
     .card h2{font-size:18px;margin:8px 0 10px}
@@ -45,12 +46,16 @@
     .footer{margin:40px 0 16px;color:var(--muted);font-size:14px;text-align:center}
     .callout{margin-top:22px;font-size:14px;color:var(--muted)}
     .callout code{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+    .bgimg {
+      background-image: url('images/faq.png');
+      background-size: contain;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand"><img src="https://vastbase.vastlink.xyz/images/Vastbase_logo_dark_theme.svg" alt="Vastbase logo" style="height:28px; width:auto; display:block;" /></div>
+      <div class="brand"><img src="images/Vastbase_logo_light_theme.svg" alt="Vastbase logo" style="height:80px; width:auto; display:block;" /></div>
       <nav class="pillnav" aria-label="Section navigation">
       </nav>
     </div>
@@ -58,7 +63,26 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Vastbase Product Explainer</h1>
+      <h2>Vastbase Product Explainer</h2>
+    </section>
+
+    <section class="grid" aria-label="Demo sections">
+      <article id="signup" class="card" aria-labelledby="signup-title">
+        <span class="badge">What is Vastbase?</span>
+        <h2 id="What">What is Vastbase?</h2>
+        <div class="video-wrap video-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AP15Jb9LUyk?si=hT7vvPhJxY8siqpT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="callout"></p>
+      </article>
+
+      <article id="signup" class="card" aria-labelledby="signup-title">
+        <span class="badge">FAQ</span>
+        <h2 id="What">FAQ</h2>
+          <div class="video-wrap video-16x9 bgimg" onclick="window.open('https://vastlink.medium.com/vastbase-faq-10297249429e', '_blank')">
+          </div>
+        <p class="callout"></p>
+      </article>
     </section>
 
     <section class="grid" aria-label="Demo sections">
@@ -68,6 +92,15 @@
         <h2 id="signup-title">Sign up with email, keyless onboarding in 10 seconds</h2>
         <div class="video-wrap video-16x9">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/YRbQWI_eM3I?si=woz6pQNMSDpwytUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="callout"></p>
+      </article>
+
+      <article id="security" class="card" aria-labelledby="signup-title">
+        <span class="badge">Security</span>
+        <h2 id="signup-title">Bank-grade security</h2>
+        <div class="video-wrap video-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6nJarJ1JbCg?si=zBH76YAPU2AD2ZZX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <p class="callout"></p>
       </article>
@@ -84,7 +117,7 @@
       <!-- SECTION 3: WORKFLOW -->
       <article id="workflow" class="card" aria-labelledby="workflow-title">
         <span class="badge">Team wallet workflow</span>
-        <h2 id="workflow-title">Create, approve, execute a transaction proposal as a team</h2>
+        <h2 id="workflow-title">Create and approve a transaction proposal as a team</h2>
         <div class="video-wrap video-16x9">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5eItZWwQqYo?si=2anFEwk9L4IaSfD_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
