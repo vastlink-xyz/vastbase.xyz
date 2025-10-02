@@ -18,9 +18,9 @@
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header{position:sticky;top:0;background:linear-gradient(180deg,rgba(11,15,20,.95),rgba(11,15,20,.85));backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .nav{display:flex;align-items:center;gap:16px;}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-    .logo{}
+
     .pillnav{display:flex;gap:8px;flex-wrap:wrap}
     .pillnav a{padding:8px 12px;border:1px solid var(--ring);border-radius:999px;color:var(--muted)}
     .pillnav a:hover{border-color:var(--accent);color:var(--text)}
@@ -57,16 +57,13 @@
   <header>
     <div class="container nav">
       <div class="brand"><img src="images/Vastbase_logo_dark_theme.svg" alt="Vastbase logo" style="height:80px; width:auto; display:block;" /></div>
-      <nav class="pillnav" aria-label="Section navigation">
-      </nav>
+      <p>
+        <h1>Product Explainer</h1>
+      </p>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h2>Vastbase Product Explainer</h2>
-    </section>
-
     <section class="grid" aria-label="Demo sections">
       <article id="signup" class="card" aria-labelledby="signup-title">
         <span class="badge">What is Vastbase?</span>
