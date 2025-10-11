@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vastbase — Open‑Source, Self‑Hosted Crypto Asset Management</title>
+  <link rel="icon" type="image/x-icon" href="images/Vastbase_logo_dark_theme.svg">
+  <meta name="description" content="Vastbase: self-hosted, open-source crypto operations with MPC security, policies, and developer-friendly APIs." />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config to enable needed colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {},
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Smooth scrolling for anchor links */
+    html { scroll-behavior: smooth; }
+    /* Subtle card hover */
+    .card-hover:hover { transform: translateY(-2px); transition: transform 200ms; }
+    /* Code block */
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white antialiased">
+  <!-- Nav -->
+  <header class="sticky top-0 z-30 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <img src="https://vastbase.vastlink.xyz/images/Vastbase_logo_dark_theme.svg" alt="Vastbase" class="h-20 w-auto" />
+      </div>
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-white/80 hover:text-white" href="#features">Features</a>
+        <a class="text-white/80 hover:text-white" href="#use-cases">Use cases</a>
+        <a class="text-white/80 hover:text-white" href="#cta">Get started</a>
+      </nav>
+      <a href="https://github.com/vastlink-xyz" target="_blank" class="group inline-flex items-center gap-2 rounded-2xl border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-200 hover:bg-green-500/20">
+        <span>Open source</span>
+        <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-0.5"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-40"></div>
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-24">
+      <div>
+        <h1 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          Self‑hosted & open‑source
+          <span class="block bg-gradient-to-r from-green-300 to-green-300 bg-clip-text text-transparent">crypto asset management</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-white/70">
+          Vastbase brings MPC security, policy controls, and developer‑friendly APIs to your own infrastructure. Install in minutes. Scale to millions.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 backdrop-blur">BTC</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 backdrop-blur">Ethereum</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 backdrop-blur">Solana</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 backdrop-blur">BNB Chain</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 backdrop-blur">Polygon</span>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#cta" class="inline-flex items-center justify-center rounded-2xl bg-green-500 px-5 py-3 font-medium text-white shadow-lg shadow-green-500/20 hover:bg-green-600">One‑click install</a>
+          <a href="#features" class="inline-flex items-center justify-center rounded-2xl border border-white/15 px-5 py-3 font-medium text-white hover:bg-white/5">Explore features</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-green-500/10 via-green-400/10 to-blue-500/10 blur-2xl"></div>
+        <div class="relative rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Feature cards preview -->
+            <div class="rounded-2xl border border-white/10 bg-slate-800/40 p-4">
+              <i data-lucide="key-round" class="h-6 w-6 text-green-300"></i>
+              <div class="mt-2 text-sm font-medium">Powered by MPC</div>
+              <div class="text-xs text-white/60">Private keys never exposed. No single point of failure.</div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-800/40 p-4">
+              <i data-lucide="code-2" class="h-6 w-6 text-green-300"></i>
+              <div class="mt-2 text-sm font-medium">Open source</div>
+              <div class="text-xs text-white/60">Transparent codebase with reproducible builds.</div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-800/40 p-4">
+              <i data-lucide="shield" class="h-6 w-6 text-green-300"></i>
+              <div class="mt-2 text-sm font-medium">Self‑custodial</div>
+              <div class="text-xs text-white/60">You control the infrastructure and policies, full sovereignty.</div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-800/40 p-4">
+              <i data-lucide="server-cog" class="h-6 w-6 text-green-300"></i>
+              <div class="mt-2 text-sm font-medium">No vendor lock‑in</div>
+              <div class="text-xs text-white/60">Pluggable key management.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="text-xl md:text-2xl font-medium mb-6">
+    <iframe width="560" height="315" style="margin: 0 auto;" src="https://www.youtube.com/embed/AP15Jb9LUyk?si=WFZZYiUXji5ETmAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </p>
+
+  <!-- Features -->
+  <section id="features" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">Features</h2>
+    <p class="mt-3 max-w-3xl text-white/70">
+      Built for security‑critical teams who need sovereignty, speed, and simple ops.
+    </p>
+    <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Repeat each feature as a card -->
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="key-round" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Powered by MPC</h3>
+        </div>
+        <p class="mt-2 text-white/70">Private keys never exposed. No single point of failure.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="code-2" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Open source</h3>
+        </div>
+        <p class="mt-2 text-white/70">Transparent codebase with reproducible builds.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="shield" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Self‑custodial</h3>
+        </div>
+        <p class="mt-2 text-white/70">You control the infrastructure and policies, full sovereignty.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="server-cog" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">No vendor lock‑in</h3>
+        </div>
+        <p class="mt-2 text-white/70">Pluggable key management layer.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="lock" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Self‑hosted, one‑click install</h3>
+        </div>
+        <p class="mt-2 text-white/70">Docker Compose quickstart.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="shield" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Enterprise‑grade security</h3>
+        </div>
+        <p class="mt-2 text-white/70">Policy based approvals, audit trails, multi-factor authentication(MFA), whitelist.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="code-2" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Developer‑friendly SDK</h3>
+        </div>
+        <p class="mt-2 text-white/70">Clean APIs, typed clients, and example apps.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="boxes" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Multi‑chain support</h3>
+        </div>
+        <p class="mt-2 text-white/70">BTC, Ethereum, Solana, BNB Chain, Polygon.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="headphones" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">24/7 support</h3>
+        </div>
+        <p class="mt-2 text-white/70">99.9% uptime SLA guarantee.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:border-green-400/40 hover:bg-slate-900/80 card-hover">
+        <div class="flex items-center gap-3">
+          <i data-lucide="banknote" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Cost‑effective</h3>
+        </div>
+        <p class="mt-2 text-white/70">60%+ less manual treasury time.</p>
+        <div class="mt-4 flex items-center gap-2 text-sm text-white/60">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="use-cases" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">Use cases</h2>
+    <p class="mt-3 max-w-3xl text-white/70">
+      Plug in the modules you need today. Grow into advanced policies and automation tomorrow.
+    </p>
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="building-2" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Treasury & Stablecoin Ops</h3>
+        </div>
+        <p class="mt-2 text-white/70">Manage multi‑chain balances, consolidate idle funds, and push payouts without juggling seed phrases or ad‑hoc scripts.</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="wallet" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Crypto Payment Acceptance</h3>
+        </div>
+        <p class="mt-2 text-white/70">Add stablecoin checkout (QR / API) in days, route funds to the right wallet, and reconcile automatically.</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="shield" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Risk & Policy Enforcement</h3>
+        </div>
+        <p class="mt-2 text-white/70">Block risky destinations, enforce spend limits, require approvals per amount, asset, chain, or address category.</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="cpu" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Operational Automation</h3>
+        </div>
+        <p class="mt-2 text-white/70">Auto‑sweep, rebalance, and route inflows based on rules. Reduce manual treasury drudgery & human error.</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="globe-2" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Compliance & Oversight</h3>
+        </div>
+        <p class="mt-2 text-white/70">Centralized audit trails, user roles, approval chains, and exportable logs make regulator & auditor conversations easier.</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-6">
+        <div class="flex items-center gap-3">
+          <i data-lucide="rocket" class="h-6 w-6 text-green-300"></i>
+          <h3 class="text-lg font-semibold">Faster Product Shipping</h3>
+        </div>
+        <p class="mt-2 text-white/70">Drop in wallets, payments, policies & monitoring with clean APIs. Ship features in days, not months of cryptography + infra work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-40"></div>
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-24">
+      <div class="rounded-3xl border border-white/10 bg-slate-900/60 p-8 backdrop-blur">
+        <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-3">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">Self‑host Vastbase in minutes</h3>
+            <p class="mt-2 max-w-2xl text-white/70">
+              One‑click Docker install. You own the infrastructure and keep full control, or bring in the one that suits you (Fireblocks, Web3Auth, Lit Protocol, Ika, Fystack ...).
+            </p>
+            <div class="mt-4 rounded-xl border border-white/10 bg-slate-950 p-4 text-sm">
+              <div class="mb-2 font-mono text-white/80"># Quickstart</div>
+              <pre class="overflow-x-auto"><code>./vastbase_setup.sh</code></pre>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <a class="block rounded-2xl bg-green-500 px-5 py-3 text-center font-medium text-white shadow-lg shadow-green-500/20 hover:bg-green-600" href="#">Get started</a>
+            <a class="block rounded-2xl border border-white/15 px-5 py-3 text-center font-medium text-white hover:bg-white/5" href="https://vastbase.vastlink.xyz/product-explainer.html" target="_blank">Product Explainer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 py-10 text-sm text-white/60">
+      <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+        <p>© 2024 ~ <span id="year"></span> Vastlink Pty Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white">Security</a>
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Replace year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Hydrate lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
